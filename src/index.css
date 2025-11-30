@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Tropical Sri Lankan color palette */
+    --background: 35 25% 97%;
+    --foreground: 200 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 20% 10%;
+
+    /* Ocean teal - primary brand color */
+    --primary: 185 70% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 185 70% 65%;
+    --primary-dark: 185 70% 30%;
+
+    /* Warm sunset amber - secondary */
+    --secondary: 30 85% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 30 85% 70%;
+
+    /* Lush jungle green - accent */
+    --accent: 145 60% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 145 60% 65%;
+
+    --muted: 35 15% 90%;
+    --muted-foreground: 200 10% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 185 70% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-tropical: linear-gradient(135deg, hsl(185 70% 45%) 0%, hsl(145 60% 45%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(30 85% 55%) 0%, hsl(15 90% 60%) 100%);
+    --gradient-ocean: linear-gradient(180deg, hsl(185 70% 55%) 0%, hsl(220 80% 50%) 100%);
+    
+    /* Shadows */
+    --shadow-tropical: 0 10px 30px -10px hsl(185 70% 45% / 0.3);
+    --shadow-card: 0 4px 20px -2px hsl(200 20% 10% / 0.08);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 200 25% 8%;
+    --foreground: 35 20% 95%;
+
+    --card: 200 20% 12%;
+    --card-foreground: 35 20% 95%;
+
+    --popover: 200 20% 12%;
+    --popover-foreground: 35 20% 95%;
+
+    --primary: 185 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 185 70% 65%;
+    --primary-dark: 185 70% 35%;
+
+    --secondary: 30 85% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 30 85% 75%;
+
+    --accent: 145 60% 50%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 145 60% 65%;
+
+    --muted: 200 15% 20%;
+    --muted-foreground: 35 10% 65%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 15% 20%;
+    --input: 200 15% 20%;
+    --ring: 185 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
